@@ -5,7 +5,6 @@ import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { profile } from "@/lib/data/profile";
 import { fadeUp } from "@/components/motion/variants";
-import { HolographicPortrait } from "./HolographicPortrait";
 
 export function Hero() {
   return (
@@ -13,12 +12,12 @@ export function Hero() {
       id="home"
       className="relative min-h-[100svh] flex items-center pt-32 pb-24 overflow-hidden"
     >
-      <div className="container-page relative flex flex-col lg:flex-row items-center gap-14 lg:gap-10">
+      <div className="container-page relative flex justify-center">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="max-w-3xl lg:flex-1"
+          className="max-w-3xl text-center"
         >
           <span className="eyebrow mb-6 block">{profile.role}</span>
 
@@ -26,15 +25,15 @@ export function Hero() {
             {profile.name}
           </h1>
 
-          <p className="mt-6 font-display text-2xl sm:text-3xl text-ink-primary/90 leading-snug max-w-2xl">
+          <p className="mt-6 font-display text-2xl sm:text-3xl text-ink-primary/90 leading-snug mx-auto max-w-2xl">
             {profile.heroHeadline}
           </p>
 
-          <p className="mt-6 text-ink-secondary text-lg max-w-xl leading-relaxed">
+          <p className="mt-6 text-ink-secondary text-lg leading-relaxed mx-auto max-w-xl">
             {profile.heroSub}
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Button href="#projects" icon={ArrowRight}>
               Explore Projects
             </Button>
@@ -43,7 +42,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-8 flex items-center gap-5">
+          <div className="mt-8 flex items-center justify-center gap-5">
             <a
               href={profile.github}
               target="_blank"
@@ -64,8 +63,6 @@ export function Hero() {
             </a>
           </div>
         </motion.div>
-
-        <HolographicPortrait className="w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[520px] lg:w-[44%] shrink-0" />
       </div>
     </section>
   );
