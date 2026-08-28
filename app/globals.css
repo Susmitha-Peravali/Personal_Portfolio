@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --font-display: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+
+  /* Dark theme (default) */
+  --color-bg-primary: 11 10 8;
+  --color-bg-secondary: 19 17 16;
+  --color-bg-elevated: 26 23 20;
+  --color-accent-primary: 240 160 0;
+  --color-accent-olive: 74 222 128;
+  --color-accent-blue: 63 208 224;
+  --color-accent-red: 232 93 74;
+  --color-ink-primary: 241 237 226;
+  --color-ink-secondary: 169 163 149;
+  --color-ink-muted: 107 103 89;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-bg-primary: 245 241 232;
+  --color-bg-secondary: 235 229 216;
+  --color-bg-elevated: 252 250 245;
+  --color-accent-primary: 161 82 0;
+  --color-accent-olive: 21 128 61;
+  --color-accent-blue: 14 116 144;
+  --color-accent-red: 179 64 46;
+  --color-ink-primary: 26 23 20;
+  --color-ink-secondary: 90 84 72;
+  --color-ink-muted: 140 133 116;
+}
+
+* {
+  scrollbar-color: rgb(var(--color-accent-primary) / 0.45) transparent;
+}
+
+html {
+  background: rgb(var(--color-bg-primary));
+}
+
+body {
+  background-color: transparent;
+  color: rgb(var(--color-ink-primary));
+}
+
+::selection {
+  background: rgb(var(--color-accent-primary) / 0.3);
+  color: #1a1714;
+}
+
+/* Focus visibility for keyboard nav — never removed, only restyled */
+:focus-visible {
+  outline: 2px solid rgb(var(--color-accent-primary));
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Terminal-glass panel on a dark, scanlit base */
+.glass {
+  position: relative;
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  border: 1px solid rgb(var(--color-accent-primary) / 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 24px 48px -26px rgba(0, 0, 0, 0.7);
+  transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 34%);
+  pointer-events: none;
+}
+
+/* Mouse-follow spotlight, position driven by --spot-x/--spot-y set on mousemove */
+.glass-hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    240px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+    rgb(var(--color-accent-primary) / 0.16),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.glass-hover {
+  cursor: pointer;
+}
+
+.glass-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgb(var(--color-accent-primary) / 0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 30px 56px -24px rgba(0, 0, 0, 0.8),
+    0 0 32px -8px rgb(var(--color-accent-primary) / 0.25);
+}
+
+.glass-hover:hover::after {
+  opacity: 1;
+}
+
+/* Tactile pill button */
+.btn-tactile {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 10px 26px -10px rgb(var(--color-accent-primary) / 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-tactile:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 16px 34px -10px rgb(var(--color-accent-primary) / 0.7);
+}
+
+.btn-tactile:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.25),
+    0 6px 14px -8px rgb(var(--color-accent-primary) / 0.5);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-ink-primary)) 0%,
+    rgb(var(--color-accent-primary)) 55%,
+    rgb(var(--color-accent-red)) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: rgb(var(--color-accent-primary));
+}
+
+/* Fixed full-viewport CRT scanline sweep, sits above content */
+.scanline-overlay {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgb(var(--color-ink-muted) / 0) 0px,
+    rgb(var(--color-ink-muted) / 0) 2px,
+    rgb(var(--color-ink-muted) / 0.12) 3px,
+    rgb(var(--color-ink-muted) / 0) 4px
+  );
+  background-size: 100% 4px;
+  mix-blend-mode: overlay;
+  animation: scanlineDrift 8s linear infinite;
+}
+
+/* Static grain layer for CRT texture */
+.crt-noise {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+}
+
+.custom-cursor-active,
+.custom-cursor-active * {
+  cursor: none !important;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.container-page {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 2.5rem;
+  }
+}

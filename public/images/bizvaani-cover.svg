@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12151C"/>
+      <stop offset="60%" stop-color="#0E1119"/>
+      <stop offset="100%" stop-color="#0A0C10"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C9A468"/>
+      <stop offset="100%" stop-color="#8A9A5B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <circle cx="640" cy="110" r="150" fill="#6E8FAF" opacity="0.12"/>
+  <circle cx="120" cy="430" r="120" fill="#8A9A5B" opacity="0.14"/>
+  <g opacity="0.5">
+    <circle cx="80" cy="70" r="1.4" fill="#F1EDE2"/>
+    <circle cx="180" cy="40" r="1" fill="#C9A468"/>
+    <circle cx="720" cy="60" r="1.2" fill="#F1EDE2"/>
+    <circle cx="500" cy="30" r="1" fill="#6E8FAF"/>
+    <circle cx="300" cy="450" r="1.2" fill="#F1EDE2"/>
+    <circle cx="600" cy="420" r="1" fill="#8A9A5B"/>
+  </g>
+  <rect x="60" y="380" width="220" height="3" rx="1.5" fill="url(#line)"/>
+  <text x="58" y="330" font-family="Georgia, serif" font-size="52" fill="#F1EDE2">BizVaani</text>
+</svg>
