@@ -123,7 +123,7 @@ export const featuredProjects: Project[] = [
     category: "Voice-First Retail Operating System",
     summary:
       "A voice-first operating system for retail businesses, with responsive dashboards for inventory and sales.",
-    cover: "/images/bizvaani-cover.svg",
+    cover: "/images/bizvaani-cover.png",
     stack: ["React", "Next.js", "Tailwind CSS", "Voice UI", "JWT"],
     github: "https://github.com/pankajydv07/BizVaani",
     demo: "https://biz-vaani.vercel.app",
