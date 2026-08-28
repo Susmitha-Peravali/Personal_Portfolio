@@ -18,7 +18,7 @@ const THEME_INIT_SCRIPT = `
 `;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nagatejasusmitha.dev"),
+  metadataBase: new URL("https://susmitha-portfolio-cyan.vercel.app"),
   title: {
     default: "Naga Teja Susmitha Peravali — Software Engineer",
     template: "%s — Naga Teja Susmitha Peravali",

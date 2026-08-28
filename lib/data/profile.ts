@@ -5,9 +5,9 @@ export const profile = {
   heroHeadline: "Building intelligent software that bridges AI and full-stack engineering.",
   heroSub:
     "I design and ship complete systems — not isolated features — across AI, backend, and frontend, with a habit of learning by building.",
-  email: "nagatejasusmitha@example.com",
-  github: "https://github.com/nagatejasusmitha",
-  linkedin: "https://linkedin.com/in/nagatejasusmitha",
+  email: "susmitha.9.9.9p@gmail.com",
+  github: "https://github.com/Susmitha-Peravali",
+  linkedin: "https://www.linkedin.com/in/susmitha-peravali-a57438291/",
   resumeUrl: "/resume.pdf",
   location: "SRM University AP, Andhra Pradesh",
   aboutParagraphs: [
