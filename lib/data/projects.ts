@@ -23,7 +23,7 @@ export const featuredProjects: Project[] = [
     category: "Hybrid AI Companion",
     summary:
       "A hybrid AI companion combining LLM reasoning with symbolic logic for persistent memory, mood tracking, and voice interaction.",
-    cover: "/images/zyviora-cover.svg",
+    cover: "/images/zyviora-cover.png",
     stack: [
       "Python",
       "Flask",
