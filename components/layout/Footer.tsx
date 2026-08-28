@@ -1,5 +1,6 @@
 import { profile } from "@/lib/data/profile";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { SiLeetcode } from "react-icons/si";
 
 export function Footer() {
   return (
@@ -26,6 +27,15 @@ export function Footer() {
             className="text-ink-secondary hover:text-accent-primary transition-colors"
           >
             <Linkedin size={18} />
+          </a>
+          <a
+            href={profile.leetcode}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LeetCode"
+            className="text-ink-secondary hover:text-accent-primary transition-colors"
+          >
+            <SiLeetcode size={18} />
           </a>
           <a
             href={`mailto:${profile.email}`}

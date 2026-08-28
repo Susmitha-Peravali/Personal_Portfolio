@@ -8,6 +8,7 @@ export const profile = {
   email: "susmitha.9.9.9p@gmail.com",
   github: "https://github.com/Susmitha-Peravali",
   linkedin: "https://www.linkedin.com/in/susmitha-peravali-a57438291/",
+  leetcode: "https://leetcode.com/u/leetcoder_learner/",
   resumeUrl: "/resume.pdf",
   location: "SRM University AP, Andhra Pradesh",
   aboutParagraphs: [
@@ -28,7 +29,7 @@ export const profile = {
     school: "SRM University AP",
     degree: "B.Tech, Computer Science Engineering",
     minor: "Minor in Robotics",
-    cgpa: "9.43",
+    cgpa: "9.38",
     graduation: "2027",
   },
 } as const;
@@ -129,9 +130,9 @@ export type Achievement = {
 };
 
 export const achievements: Achievement[] = [
-  { id: "schrodinger", title: "Top 12 Finalist", detail: "Mission Schrödinger Cat Hackathon" },
+  { id: "schrodinger", title: "Top 6 Finalist", detail: "Mission Schrödinger Cat Hackathon" },
   { id: "janatics", title: "Stage 2 Qualifier", detail: "Janatics Automation Skill Challenge" },
   { id: "adobe", title: "Round 1", detail: "Adobe India Hackathon" },
   { id: "oracle", title: "Oracle Certified", detail: "Java Programmer" },
-  { id: "leetcode", title: "170+ Problems", detail: "LeetCode" },
+  { id: "leetcode", title: "223+ Problems", detail: "LeetCode" },
 ];

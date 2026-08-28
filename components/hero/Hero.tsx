@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
+import { SiLeetcode } from "react-icons/si";
 import { Button } from "@/components/ui/Button";
 import { profile } from "@/lib/data/profile";
 import { fadeUp } from "@/components/motion/variants";
@@ -60,6 +61,15 @@ export function Hero() {
               aria-label="LinkedIn profile"
             >
               <Linkedin size={20} />
+            </a>
+            <a
+              href={profile.leetcode}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ink-secondary hover:text-accent-primary transition-colors"
+              aria-label="LeetCode profile"
+            >
+              <SiLeetcode size={20} />
             </a>
           </div>
         </motion.div>

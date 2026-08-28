@@ -34,7 +34,8 @@ export const featuredProjects: Project[] = [
       "JavaScript",
       "Chart.js",
     ],
-    github: "https://github.com/nagatejasusmitha/zyviora",
+    github: "https://github.com/Susmitha-Peravali/Zyviora_Personal_Companion",
+    demo: "https://zyviora-personal-companion.onrender.com",
     featured: true,
     sections: [
       {
@@ -79,7 +80,7 @@ export const featuredProjects: Project[] = [
       "A real-time marketplace for buying and selling used tech, with role-based flows for buyers, sellers, and admins.",
     cover: "/images/resale-cover.svg",
     stack: ["React", "Node.js", "Express.js", "MongoDB", "Socket.io", "JWT", "RBAC", "REST APIs"],
-    github: "https://github.com/nagatejasusmitha/tech-resale-hub",
+    github: "https://github.com/Susmitha-Peravali/Tech_Resale_Hub",
     featured: true,
     sections: [
       {
@@ -124,7 +125,8 @@ export const featuredProjects: Project[] = [
       "A voice-first operating system for retail businesses, with responsive dashboards for inventory and sales.",
     cover: "/images/bizvaani-cover.svg",
     stack: ["React", "Next.js", "Tailwind CSS", "Voice UI", "JWT"],
-    demo: "https://bizvaani.example.com",
+    github: "https://github.com/pankajydv07/BizVaani",
+    demo: "https://biz-vaani.vercel.app",
     featured: true,
     sections: [
       {
