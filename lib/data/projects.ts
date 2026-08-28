@@ -78,7 +78,7 @@ export const featuredProjects: Project[] = [
     category: "Marketplace Platform",
     summary:
       "A real-time marketplace for buying and selling used tech, with role-based flows for buyers, sellers, and admins.",
-    cover: "/images/resale-cover.svg",
+    cover: "/images/resale-cover.jpeg",
     stack: ["React", "Node.js", "Express.js", "MongoDB", "Socket.io", "JWT", "RBAC", "REST APIs"],
     github: "https://github.com/Susmitha-Peravali/Tech_Resale_Hub",
     featured: true,
